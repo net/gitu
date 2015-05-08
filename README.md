@@ -5,7 +5,7 @@
 - *Not tested on Windows. Should work on Mac OS X/Linux.*
 
 ### Installing
-./gitu should be placed in `/usr/local/bin/` so it can be run with `gitu`. Use curl or wget for a easiest installation (*only works on Unix machines*).
+./gitu should be placed in `/usr/local/bin/` so it can be run with `gitu`. Use curl or wget for a easiest installation (*only works on Unix-based operating system*).
 
 #### via curl
 
