@@ -19,4 +19,14 @@ Gitu is a very small script for managing multiple git names/emails. It moves `gi
 
 ## Usage
 
-### git_users.yml
+### Profiles
+
+Profiles are named sets of names and emails.
+    example:
+      name: userone
+      email: my.email23@example.com
+    example2:
+      name: usertwo
+      email: other.email421@company.com
+
+###
