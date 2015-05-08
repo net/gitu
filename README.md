@@ -32,26 +32,28 @@ bitbucket:
   email: atlassian@example.com
 ```
 
-### Set Profile
+### Commands
+
+#### Set Profile
 
 `gitu [profile]` sets global git name and email. For example `gitu github` would set the global name and email to the name/email defined under github in `~/.git_users.yml`
 
-### Current Profile
+#### Current Profile
 
 `gitu` shows the current profile.
 
-### Set Repository Profile
+#### Set Repository Profile
 
 `gitu -s [profile]` sets the profile for the *current repository*. This adds the name/email to `.git/config` so it stays in effect even after you leave the repository.
 
-### Add Profile
+#### Add Profile
 
 `gitu + [profile name] [name] [email]` adds a profile. Profiles can also be added directly in `~/.git_users.yml`.
 
-### Remove Profile
+#### Remove Profile
 
 `gitu + [profile name]` removes a profile. Profiles can also be removed directly in `~/.git_users.yml`.
 
-### Version
+#### Version
 
 `gitu -v` returns the current version.
