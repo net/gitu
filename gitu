@@ -1,0 +1,83 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+if File.exist?(ENV['HOME'] + '/.git_users.yml')
+  profiles = YAML.load_file(ENV['HOME'] + '/.git_users.yml')
+else
+  `touch ~/.git_users.yml`
+end
+
+# gitu shows current profile
+if !ARGV[0]
+  name = `git config user.name`.strip
+  email = `git config user.email`.strip
+  
+  profile = profiles.key({ 'name' => name, 'email' => email })
+
+  puts "\e[34m==> \e[0mcurently using \e[34m#{profile}\e[0m (#{name.strip}/#{email.strip})"
+
+# gitu -v shows version
+elsif ARGV[0] == '-v'
+  puts "\e[34m==> \e[0musing gitu 0.0.2 // usage: \e[33mgitu [profile]\e[0m // define profiles in ~/.git_users"
+
+# gitu -s sets repo profile
+elsif ARGV[0] == '-s'
+  begin
+    name = profiles[ARGV[1]]['name']
+    email = profiles[ARGV[1]]['email']
+
+    raise RuntimeError unless File.exist?('.git/config')
+
+    `git config user.name #{name}`
+    `git config user.email #{email}`
+
+    puts "\e[32m==> \e[0mchanged git profile to \e[34m#{ARGV[1]} \e[0m(#{name}/#{email})"
+  rescue NoMethodError
+    puts "\e[31m==> \e[0mno git profile found for \e[31m#{ARGV[1]}"
+    abort
+  rescue RuntimeError
+    puts "\e[31m==> \e[0mnot in a git repository, run \e[33mgit init\e[0m to create one"
+    abort
+  end
+
+# gitu + adds profile
+elsif ARGV[0] == '+'
+  profile = {
+    ARGV[1] => {
+      'name' => ARGV[2],
+      'email' => ARGV[3]
+    }
+  }
+
+  File.open(ENV['HOME'] + '/.git_users.yml', 'a') {|f| f.puts(profile.to_yaml.gsub("---\n", '')) }
+
+  puts "\e[32m==> \e[0madded git profile \e[34m#{ARGV[1]} \e[0m(#{ARGV[2]}/#{ARGV[3]})"
+
+# gitu - removes profile
+elsif ARGV[0] == '-'
+  name = profiles[ARGV[1]]['name']
+  email = profiles[ARGV[1]]['email']
+
+  profiles.delete(ARGV[1])
+
+  File.open(ENV['HOME'] + '/.git_users.yml', 'w') {|f| f.puts(profiles.to_yaml.gsub("---\n", '')) }
+
+  puts "\e[32m==> \e[0mremoved git profile \e[34m#{ARGV[1]} \e[0m(#{name}/#{email})"
+
+# gitu (profile) sets global profile
+else
+  begin
+    name = profiles[ARGV[0]]['name']
+    email = profiles[ARGV[0]]['email']
+
+    `git config --global user.name #{name}`
+    `git config --global user.email #{email}`
+  rescue NoMethodError
+    puts "\e[31m==> \e[0mno git profile found for \e[31m#{ARGV[0]}"
+    abort
+  else
+
+    puts "\e[32m==> \e[0mchanged git profile to \e[34m#{ARGV[0]} \e[0m(#{name}/#{email})"
+  end
+end
