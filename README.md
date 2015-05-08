@@ -2,8 +2,7 @@
 
 ### Prerequisites
 - Ruby 2.0.0 or greater
-
-Not tested on Windows. Should work on Mac OS X/Linux.
+- *Not tested on Windows. Should work on Mac OS X/Linux.*
 
 ### Installing
 
