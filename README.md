@@ -52,7 +52,7 @@ bitbucket:
 
 #### Remove Profile
 
-`gitu + [profile name]` removes a profile. Profiles can also be removed directly in `~/.git_users.yml`.
+`gitu - [profile name]` removes a profile. Profiles can also be removed directly in `~/.git_users.yml`.
 
 #### Version
 
