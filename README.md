@@ -1,9 +1,9 @@
 # Gitu
 
-### Dependancies
+### Prerequisites
 - Ruby 2.0.0 or greater
 
-Not tested on Windows. Should work on Mac/Linux.
+Not tested on Windows. Should work on Mac OS X/Linux.
 
 ### Installing
 
