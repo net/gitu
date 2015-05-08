@@ -36,4 +36,9 @@ bitbucket:
 
 `gitu [profile]` sets global git name and email.
 
-Example: `gitu github`
+Example:
+
+```
+$ gitu github
+==> changed git profile to github (iNety/myemail@gmail.com)
+```
