@@ -3,7 +3,7 @@
 ### Dependancies
 - Ruby 2.0.0 or greater
 
-Untested on Windows. Should work on Mac/Linux.
+Not tested on Windows. Should work on Mac/Linux.
 
 ### Installing
 
