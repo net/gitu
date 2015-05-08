@@ -2,7 +2,9 @@
 A lightweight manager for multiple git accounts. Written in Ruby.
 
 ### Dependancies
-    - Ruby 2.0.0 or greater
+- Ruby 2.0.0 or greater
+
+Untested on Windows. Should work on Mac/Linux.
 
 Curl:
 
