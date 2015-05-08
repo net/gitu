@@ -7,10 +7,10 @@ Not tested on Windows. Should work on Mac/Linux.
 
 ### Installing
 
-Curl:
+via curl
 
-    curl -o /usr/local/bin/gitu https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu
+`curl -o /usr/local/bin/gitu https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
 
-Wget:
+via wget
 
-    wget -P /usr/local/bin https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu
+`wget -P /usr/local/bin https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
