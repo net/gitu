@@ -6,6 +6,8 @@ A lightweight manager for multiple git accounts. Written in Ruby.
 
 Untested on Windows. Should work on Mac/Linux.
 
+### Installing
+
 Curl:
 
     curl -o /usr/local/bin/gitu https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu
