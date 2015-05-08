@@ -36,7 +36,7 @@ bitbucket:
 
 #### Set Profile
 
-`gitu [profile]` sets global git name and email. For example `gitu github` would set the global name and email to the name/email defined under github in `~/.git_users.yml`
+`gitu [profile]` sets the git global name and email. For example `gitu github` would set the global name and email to the name/email defined under github in `~/.git_users.yml`
 
 #### Current Profile
 
