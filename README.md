@@ -11,11 +11,11 @@ Gitu is a tiny script for managing multiple git names/emails. It moves `git conf
 
 #### via curl
 
-`curl -o /usr/local/bin/gitu https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
+`curl -o /usr/local/bin/gitu https://raw.githubusercontent.com/net/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
 
 #### via wget
 
-`wget -P /usr/local/bin https://raw.githubusercontent.com/iNety/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
+`wget -P /usr/local/bin https://raw.githubusercontent.com/net/gitu/master/gitu && chmod a+x /usr/local/bin/gitu`
 
 ## Usage
 
@@ -25,7 +25,7 @@ Profiles are named sets of names and emails. Example:
 
 ```yaml
 github:
-  name: iNety
+  name: net
   email: myemail@me.com
 bitbucket:
   name: Atlassian
