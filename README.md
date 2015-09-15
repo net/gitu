@@ -3,7 +3,7 @@
 Gitu is a tiny script for managing multiple git names/emails. It moves `git config --global user.name NAME` and `git config --global user.email EMAIL` to a quick, easy command. Profiles (sets of names and emails) are stored in a yaml file at ~/.git_users.yml.
 
 ### Prerequisites
-- Unix-based operating system (Mac OS X or Linux)
+- *nix operating system (Mac OS X or Linux)
 - Ruby 2.0.0 or greater
 
 ### Installing
