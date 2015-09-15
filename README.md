@@ -7,7 +7,7 @@ Gitu is a tiny script for managing multiple git names/emails. It moves `git conf
 - Ruby 2.0.0 or greater
 
 ### Installing
-`./gitu` should be placed in `/usr/local/bin/` so it can be executed with `gitu`. Use curl or wget for a easiest installation. `~/.git_users.yml` is automatically generated if it doesn't exist the first time any gitu command is run.
+`./gitu` should be placed in `/usr/local/bin/` so it can be executed with `gitu`. Use curl or wget for easiest installation. `~/.git_users.yml` is automatically generated if it doesn't exist the first time any gitu command is run.
 
 #### via curl
 
