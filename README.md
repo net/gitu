@@ -28,7 +28,7 @@ github:
   name: net
   email: myemail@me.com
 bitbucket:
-  name: Atlassian
+  name: net
   email: atlassian@example.com
 ```
 
